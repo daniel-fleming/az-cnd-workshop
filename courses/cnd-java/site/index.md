@@ -1,1 +1,0 @@
-# Cloud Native Java Developer Workshop
