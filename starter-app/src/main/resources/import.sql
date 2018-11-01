@@ -1,0 +1,3 @@
+INSERT INTO customers (id, name, account_number, contact, phone_number, address) VALUES (1,'AutoZone','123456789','John Doe','901-444-2222','123 South Front St, Memphis, TN 38103');
+INSERT INTO customers (id, name, account_number, contact, phone_number, address) VALUES (2,'FedEx','987654321','Bob Jones','901-263-0000','50 FedEx Pkwy, Collierville, TN 38017');
+INSERT INTO customers (id, name, account_number, contact, phone_number, address) VALUES (3,'Service Master','111111111','Jane Smith','901-555-1212','111 Main St, Memphis, TN 38103');

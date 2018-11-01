@@ -1,0 +1,47 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven {
+            url "http://platform-acceleration-lab-maven.s3.amazonaws.com"
+        }
+    }
+
+    dependencies {
+        classpath "io.pivotal.pal.shipkin:shipkin-plugin:7.0.2"
+    }
+}
+
+apply plugin: "io.pivotal.pal.shipkin.plugin"
+
+shipkin {
+    
+    baseName = "cloud-native-java-workshop"
+    courseVersion = "2.0.0"
+    courseTitle = "Cloud Native Java Workshop"
+    feedbackUrl = "https://goo.gl/forms/kBPRh9DCTMJWao7d2?entry.31443528=https://cnd-java-workshop-v1.pal.pivotal.io/"
+    feedbackUrlField = "entry.31443528"
+    useSecurity = false
+
+    reviewSpace = "workshops-review"
+    productionSpace = "workshops-production"
+
+    units = ["cnd-java"]
+
+    topicKey = [
+        "Cloud Native": "light-blue",
+        "PCF"       : "green"
+    ]
+
+    theme {
+        mainColor = "#216eb9"
+        linkColor = "#216eb9"
+        accentColor = "#216eb9"
+        favicon = "/favicon.ico"
+
+        slideImage = "=/p.png"
+        logoImage = "/cnd-java-workshop.svg"
+
+    }
+}
+
+defaultTasks "tasks"

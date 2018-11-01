@@ -1,5 +1,13 @@
 .DS_Store
 .gradle/
-courses/.DS_Store
-courses/.project
-courses/cnd-java/.DS_Store
+workshop-content/.DS_Store
+workshop-content/.gradle
+workshop-content/courses/.DS_Store
+workshop-content/courses/.project
+workshop-content/courses/cnd-java/.DS_Store
+workshop-content/courses/.project
+starter-app/target
+starter-app/.classpath
+starter-app/.project
+starter-app/.settings/
+starter-app/.vscode/
