@@ -19,10 +19,6 @@ Checkout, build and run a sample application on your local machine.  Throughout 
 
     `$ cd starter-app`
 
-1. Navigate to `module-1`.
-
-    `$ cd module-1`
-
 1. Build the project and generate the Spring Boot jar file
 
     `$ mvn clean package`
