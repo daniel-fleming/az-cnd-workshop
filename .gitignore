@@ -6,8 +6,8 @@ workshop-content/courses/.DS_Store
 workshop-content/courses/.project
 workshop-content/courses/cnd-java/.DS_Store
 workshop-content/courses/.project
-starter-app/module-1/target
-starter-app/module-1/.classpath
-starter-app/module-1/.project
-starter-app/module-1/.settings/
-starter-app/module-1/.vscode/
+starter-app/target
+starter-app/.classpath
+starter-app/.project
+starter-app/.settings/
+starter-app/.vscode/
