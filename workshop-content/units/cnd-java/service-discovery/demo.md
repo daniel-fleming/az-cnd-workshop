@@ -18,44 +18,29 @@ Add service discovery to the sample app.
 
 1. From the command line type:
 
-    `$ cf create-service p-service-registry standard service-discovery`
+    `$ cf create-service p-service-registry trial <YOUR-SERVICE-DISCOVERY-NAME>`
 
-1. Navigate to `Apps Manager` and look in your space.  Your service discovery instance should show in the `Apps` list.  
+1. Navigate to `Apps Manager` and look in your space.  Your service discovery instance should show in the `Services` tab.  
 
     * It may take a few minutes for your service instance to be created.  
 
-1. Once the status shows as `Running` click the route and navigate to your service discovery instance in the browser.
+1. Once the status shows as `Running` click on the service name.  Click the `Manage` link to open the GUI in a new browser window.
 
-## Navigate to the root directory
+## Setup the Service Discovery Client
 
 1. Navigate to the `starter-app`.
 
     `$ cd starter-app`
 
-1. Open the `application.yml` in `src/main/resources` with your editor.
+1. Open `DemoApplication.java` in your editor or IDE.
 
-1. Add the following line to the `application.yml` file:
+1. Add the `@EnableDiscoveryClient` annotation.
 
     ```
-    spring:
-      application:
-        name: starter-app
-
-    eureka:
-      client:
-      registerWithEureka: true
-      fetchRegistry: true
-      serviceUrl:
-        defaultZone: https://localhost:8761/eureka/
-    instance:
-      hostname: ${vcap.application.uris[0]}
-      metadata-map:
-        management:
-          port: 80
-      non-secure-port: 80
-      secure-port: 443
-      status-page-url: http://${vcap.application.uris[0]}/actuator/info
-      health-check-url: http://${vcap.application.uris[0]}/actuator/health
+    @SpringBootApplication
+    @EnableDiscoveryClient
+    public class DemoApplication {
+        ...
     ```
     
 1. Open `manifest.yml` in your editor of choice.
@@ -64,14 +49,28 @@ Add service discovery to the sample app.
 
     ```
     applications:
-        name: sample-app
+    -   name: sample-app
         random-route: true
         memory: 1G
         instances: 1
         path: target/demo-0.0.1-SNAPSHOT.jar
         services:
-          - service-discovery
+          - svc-discovery
     ```
+
+1. Open `pom.xml` file in your editor.  Add the following dependency:
+
+    ```
+    <dependency>
+		<groupId>io.pivotal.spring.cloud</groupId>
+		<artifactId>spring-cloud-services-starter-service-registry</artifactId>
+        <version>2.0.2.RELEASE</version>
+	</dependency>
+    ```
+
+1. Build the app using the following command:
+
+    `$ mvn clean package -DskipTests`
 
 1. When you deploy your app to PCF it will automatically register with your Eureka Discovery service.
 
