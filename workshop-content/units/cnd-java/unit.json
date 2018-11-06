@@ -2,7 +2,17 @@
   "subjects": [
     {
       "title": "Cloud Native Java Developer",
-      "lessons": [
+      "lessons": [        
+        {
+          "title": "PCF Overview",
+          "topic": "PCF",
+          "materials": [
+            {
+              "title": "demo",
+              "location": "pcf-overview/demo.html"
+            }
+          ]
+        },
         {
           "title": "Going Cloud Native",
           "topic": "Cloud Native",
@@ -15,16 +25,6 @@
             {
               "title": "demo",
               "location": "going-cloud-native/demo.html"
-            }
-          ]
-        },
-        {
-          "title": "PCF Overview",
-          "topic": "PCF",
-          "materials": [
-            {
-              "title": "demo",
-              "location": "pcf-overview/demo.html"
             }
           ]
         },
