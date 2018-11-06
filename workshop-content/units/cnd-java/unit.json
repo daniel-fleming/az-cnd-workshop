@@ -77,6 +77,16 @@
               "location": "pcf-deployment/demo.html"
             }
           ]
+        },
+        {
+          "title": "Blue Green Deployments",
+          "topic": "PCF",
+          "materials": [
+            {
+              "title": "demo",
+              "location": "blue-green-deploy/demo.html"
+            }
+          ]
         }
       ]
     }      
