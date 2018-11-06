@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: starter-app
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
+    
