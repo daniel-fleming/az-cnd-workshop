@@ -39,26 +39,6 @@
           ]
         },
         {
-          "title": "Configuration Server",
-          "topic": "Cloud Native",
-          "materials": [
-            {
-              "title": "demo",
-              "location": "configuration-server/demo.html"
-            }
-          ]
-        },
-        {
-          "title": "Backing Services",
-          "topic": "Cloud Native",
-          "materials": [
-            {
-              "title": "demo",
-              "location": "backing-services/demo.html"
-            }
-          ]
-        },
-        {
           "title": "Spring Boot Actuator",
           "topic": "Cloud Native",
           "materials": [
@@ -69,15 +49,25 @@
           ]
         },
         {
-          "title": "Spring Cloud Sleuth",
+          "title": "Service Discovery",
           "topic": "Cloud Native",
           "materials": [
             {
               "title": "demo",
-              "location": "spring-cloud-sleuth/demo.html"
+              "location": "service-discovery/demo.html"
             }
           ]
         },
+        {
+          "title": "Configuration Server",
+          "topic": "Cloud Native",
+          "materials": [
+            {
+              "title": "demo",
+              "location": "configuration-server/demo.html"
+            }
+          ]
+        },        
         {
           "title": "PCF Deployment",
           "topic": "PCF",
